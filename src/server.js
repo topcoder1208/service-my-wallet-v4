@@ -1,6 +1,7 @@
 'use strict'
 
 var fs = require('fs')
+var path = require('path')
 var http = require('http')
 var https = require('https')
 var express = require('express')
