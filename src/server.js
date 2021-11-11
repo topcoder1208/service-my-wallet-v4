@@ -32,10 +32,10 @@ merchantAPI.use('/accounts', accountsAPI)
 app.param('guid', setParam('guid'))
 accountsAPI.param('account', setParam('account'))
 
-app.use(express.static(path.resolve(__dirname, '../../blockchain-wallet-v4-frontend/lib')));
+app.use(express.static(path.resolve(__dirname, '../client/lib')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../../blockchain-wallet-v4-frontend/lib', 'index.html'));
+  res.sendFile(path.resolve(__dirname, '../client/lib', 'index.html'));
 });
 
 legacyAPI.use(bodyParser.json())
